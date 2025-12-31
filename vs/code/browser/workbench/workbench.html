@@ -24,7 +24,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
 		<!-- Workbench Configuration -->
-		<meta id="vscode-workbench-web-configuration" data-settings="{&quot;productConfiguration&quot;:{&quot;enableTelemetry&quot;:false,&quot;webEndpointUrlTemplate&quot;:&quot;http://{{uuid}}.localhost:8000/static/sources&quot;,&quot;webviewContentExternalBaseUrlTemplate&quot;:&quot;http://{{uuid}}.localhost:8000/static/sources/out/vs/workbench/contrib/webview/browser/pre/&quot;},&quot;additionalBuiltinExtensions&quot;:[{&quot;scheme&quot;:&quot;http&quot;,&quot;authority&quot;:&quot;localhost:8000&quot;,&quot;path&quot;:&quot;/static/extensions/0&quot;}],&quot;workspaceUri&quot;:{&quot;$mid&quot;:1,&quot;path&quot;:&quot;/default.code-workspace&quot;,&quot;scheme&quot;:&quot;tmp&quot;}}">
+		<meta id="vscode-workbench-web-configuration" data-settings="{&quot;productConfiguration&quot;:{&quot;enableTelemetry&quot;:false,&quot;webEndpointUrlTemplate&quot;:&quot;http://{{uuid}}.localhost:8000/static/sources&quot;,&quot;webviewContentExternalBaseUrlTemplate&quot;:&quot;http://{{uuid}}.localhost:8000/bubbleprints_create/static/sources/out/vs/workbench/contrib/webview/browser/pre/&quot;},&quot;additionalBuiltinExtensions&quot;:[{&quot;scheme&quot;:&quot;http&quot;,&quot;authority&quot;:&quot;localhost:8000&quot;,&quot;path&quot;:&quot;/bubbleprints_create/static/extensions/0&quot;}],&quot;workspaceUri&quot;:{&quot;$mid&quot;:1,&quot;path&quot;:&quot;/default.code-workspace&quot;,&quot;scheme&quot;:&quot;tmp&quot;}}">
 
 		<!-- Workbench Auth Session -->
 		<meta id="vscode-workbench-auth-session" data-settings="{{WORKBENCH_AUTH_SESSION}}">
@@ -32,7 +32,7 @@
 		<!-- Workbench Icon/Manifest/CSS -->
 		<link rel="icon" href="/resources/server/favicon.ico" type="image/x-icon" />
 		<link rel="manifest" href="{{WORKBENCH_WEB_BASE_URL}}/resources/server/manifest.json" crossorigin="use-credentials" />
-		<link rel="stylesheet" href="/vs/code/browser/workbench/workbench.css">
+		<link rel="stylesheet" href="/bubbleprints_create/vs/code/browser/workbench/workbench.css">
 
 	</head>
 
@@ -48,8 +48,8 @@
 		performance.mark('code/willLoadWorkbenchMain');
 	</script>
 	<!-- always ensure built in english NLS messages -->
-	<script type="module" src="/vs/code/browser/workbench/nls.messages.js"></script>
+	<script type="module" src="/bubbleprints_create/vs/code/browser/workbench/nls.messages.js"></script>
 	<!-- attempt to load NLS messages in case non-english -->
 	<script type="module" src="{{WORKBENCH_NLS_URL}}"></script>
-	<script type="module" src="/vs/code/browser/workbench/workbench.js"></script>
+	<script type="module" src="/bubbleprints_create/vs/code/browser/workbench/workbench.js"></script>
 </html>

@@ -1,0 +1,66 @@
+{
+    "name": "bubblemod-vscode",
+    "displayName": "Bubblemodding support",
+    "version": "0.0.1",
+    "publisher": "me",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "browser": "./dist/extension.js",
+    "main": "./dist/extension.js",
+    "activationEvents": [
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "blueprint",
+                "extensions": [
+                    ".bp"
+                ],
+                "configuration": "./bubblemod-configuration.json"
+            }
+        ],
+        "semanticTokenScopes": [
+            {
+                "language": "blueprint",
+                "scopes": {
+                    "property": [
+                        "variable.other.property"
+                    ],
+                    "class": [
+                        "entity.name.class"
+                    ],
+                    "enumMember": [
+                        "variable.other.enummember"
+                    ],
+                    "type": [
+                        "entity.name.type"
+                    ]
+                }
+            }
+        ],
+        "commands": [
+            {
+                "command": "bubble.createClassFeature",
+                "title": "BubbleMod: Create a class feature"
+            },
+            {
+                "command": "bubble.reloadProject",
+                "title": "BubbleMod: Reload project file"
+            }
+
+        ]
+    },
+    "scripts": {
+        "publish": "bun build ./src/extension.ts --outdir ./publish --external vscode --sourcemap --format cjs",
+        "build": "bun build ./src/extension.ts --outdir ./dist --external vscode --sourcemap --format cjs",
+        "watch": "bun build ./src/extension.ts --outdir ./dist --external vscode --sourcemap --format cjs --watch"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "typescript": "^5.0.0"
+    }
+}
